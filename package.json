@@ -1,0 +1,26 @@
+{
+  "name": "@reedsy/eslint-config-reedsy",
+  "version": "1.0.0",
+  "description": "Common eslint config",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "peerDependencies": {
+    "eslint": ">= 3",
+    "eslint-plugin-import": ">= 2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reedsy/eslint-config-reedsy.git"
+  },
+  "author": "Alec Gibson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/reedsy/eslint-config-reedsy/issues"
+  },
+  "homepage": "https://github.com/reedsy/eslint-config-reedsy#readme",
+  "dependencies": {
+    "eslint-config-airbnb-base": "^13.0.0"
+  }
+}

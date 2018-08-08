@@ -96,7 +96,6 @@ rules:
   - always-prefix
   match-default-export-name:
     severity: warning
-  no-boolean-literal-compare: true
   no-consecutive-blank-lines: true
   no-trailing-whitespace: true
   no-unnecessary-callback-wrapper: true

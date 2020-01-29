@@ -16,11 +16,8 @@ rules:
     - code: 120
       ignorePattern: '^import '
       ignoreUrls: true
-  # 2 spaces means nested code doesn't drift too far across the screen
-  indent:
-    - error
-    - 2
-    - SwitchCase: 1
+  # Use the TypesScript-safe version
+  indent: off
   # Google enforces this, but TypeScript is enough documentation for us
   require-jsdoc: off
   valid-jsdoc: off
@@ -73,6 +70,11 @@ rules:
     - always
   '@typescript-eslint/explicit-member-accessibility':
     - error
+    # 2 spaces means nested code doesn't drift too far across the screen
+  '@typescript-eslint/indent':
+    - error
+    - 2
+    - SwitchCase: 1
 overrides:
   - files:
     - '*.spec.ts'

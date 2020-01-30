@@ -16,3 +16,6 @@ fi
 git checkout -b release-$VERSION
 git tag $VERSION
 git push origin refs/tags/$VERSION
+
+git checkout master
+git branch --delete --force release-$VERSION

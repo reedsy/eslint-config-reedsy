@@ -13,5 +13,4 @@ else
   echo "Deploying version $VERSION"
 fi
 
-git checkout -b release-$VERSION
 git tag $VERSION

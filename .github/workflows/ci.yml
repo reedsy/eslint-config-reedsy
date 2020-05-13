@@ -23,8 +23,12 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: Install
       run: npm install
-    - name: Release
+    - name: Tag
       if: ${{ github.ref == 'refs/heads/master' }}
-      run: ./deploy.sh
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: ./tag.sh
+    - name: Push tag
+      if: ${{ github.ref == 'refs/heads/master' }}
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        tags: true

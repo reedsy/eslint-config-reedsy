@@ -13,7 +13,11 @@ jobs:
     runs-on: ubuntu-18.04
     timeout-minutes: 10
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v2
+      with:
+        # Use PAT instead of default Github token, because the default
+        # token deliberately will not trigger another workflow run
+        token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
     - uses: actions/setup-node@v1
       with:
         node-version: '10.x'
@@ -22,11 +26,3 @@ jobs:
     - name: Tag
       if: ${{ github.ref == 'refs/heads/master' }}
       run: ./tag.sh
-    - name: Push tag
-      if: ${{ github.ref == 'refs/heads/master' }}
-      uses: ad-m/github-push-action@master
-      with:
-        # Use PAT instead of default Github token, because the default
-        # token deliberately will not trigger another workflow run
-        github_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
-        tags: true

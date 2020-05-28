@@ -33,6 +33,11 @@ rules:
   quote-props:
     - error
     - as-needed
+  # The default rules are a bit liberal (eg allow unnecessary backticks)
+  quotes:
+    - error
+    - single
+    - avoidEscape: true
 
   ### TYPESCRIPT ###
   # Disabling explicit any is pretty annoying when also using

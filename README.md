@@ -6,14 +6,8 @@ anti-patterns.
 
 ## Installation
 
-Install this package like any other of our private packages, by updating `package.json` eg:
-
-```json
-{
-  "devDependencies:" {
-    "@reedsy/eslint-config-reedsy": "git+ssh://git@github.com/reedsy/eslint-config-reedsy#1.0.0"
-  }
-}
+```bash
+npm i @reedsy/eslint-config-reedsy --save-dev
 ```
 
 You'll also need to install the peer dependencies:

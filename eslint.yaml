@@ -2,7 +2,6 @@ parserOptions:
   parser: '@typescript-eslint/parser'
 extends:
   - 'google'
-  - 'plugin:@typescript-eslint/eslint-recommended'
   - 'plugin:@typescript-eslint/recommended'
   - 'plugin:vue/recommended'
 plugins:
@@ -51,13 +50,16 @@ rules:
       classes: false
   # Sometimes modules don't have type definitions, so we need to require them
   '@typescript-eslint/no-var-requires': off
-  # Makes it clear which files are interfaces, and leaves the un-prefixed
-  # name available to be a class (without needing eg an 'Impl' suffix)
-  '@typescript-eslint/interface-name-prefix':
+  '@typescript-eslint/naming-convention':
     - error
-    - prefixWithI: always
-  # Allow extending an interface, so that our extension of io-ts built
-  # interfaces doesn't trigger this
+    # Makes it clear which files are interfaces, and leaves the un-prefixed
+    # name available to be a class (without needing eg an 'Impl' suffix)
+    - selector: interface
+      format:
+      - PascalCase
+      custom:
+        regex: ^I[A-Z]
+        match: true
   '@typescript-eslint/no-empty-interface':
     - error
     - allowSingleExtends: true
@@ -80,6 +82,15 @@ rules:
     - error
     - 2
     - SwitchCase: 1
+  '@typescript-eslint/explicit-module-boundary-types':
+    - warn
+    # We should trust ourselves to use any when appropriate
+    - allowArgumentsExplicitlyTypedAsAny: true
+      allowHigherOrderFunctions: true
+      allowTypedFunctionExpressions: true
+  # The default options are a bit aggressive and ban eg Function, which
+  # sometimes has legitimate use
+  '@typescript-eslint/ban-types': off
 overrides:
   - files:
     - '*.spec.ts'

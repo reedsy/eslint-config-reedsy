@@ -37,6 +37,8 @@ rules:
     - error
     - single
     - avoidEscape: true
+  # We use @typescript/naming-convention instead
+  camelcase: off
 
   ### TYPESCRIPT ###
   # Disabling explicit any is pretty annoying when also using

@@ -1,6 +1,6 @@
 {
   "name": "@reedsy/eslint-config-reedsy",
-  "version": "3.0.2",
+  "version": "3.1.0",
   "description": "Common eslint config",
   "main": "eslint.yaml",
   "scripts": {

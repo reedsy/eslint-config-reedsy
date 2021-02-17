@@ -93,6 +93,38 @@ rules:
   # The default options are a bit aggressive and ban eg Function, which
   # sometimes has legitimate use
   '@typescript-eslint/ban-types': off
+  '@typescript-eslint/member-ordering':
+    - "error"
+    - default:
+      - signature
+
+      - public-abstract-field
+      - protected-abstract-field
+      - private-abstract-field
+
+      - public-abstract-method
+      - protected-abstract-method
+      - private-abstract-method
+
+      - public-static-field
+      - protected-static-field
+      - private-static-field
+
+      - public-field
+      - protected-field
+      - private-field
+
+      - protected-static-method
+      - public-static-method
+      - private-static-method
+
+      - public-constructor
+      - protected-constructor
+      - private-constructor
+
+      - public-method
+      - protected-method
+      - private-method
 overrides:
   - files:
     - '*.spec.ts'

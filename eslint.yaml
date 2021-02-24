@@ -39,6 +39,14 @@ rules:
     - avoidEscape: true
   # We use @typescript/naming-convention instead
   camelcase: off
+  # Keep consistent spacing
+  no-multiple-empty-lines:
+    - error
+    - max: 1
+  lines-between-class-members:
+    - error
+    - always
+    - exceptAfterSingleLine: true
 
   ### TYPESCRIPT ###
   # Disabling explicit any is pretty annoying when also using

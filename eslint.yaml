@@ -50,6 +50,8 @@ rules:
   function-paren-newline:
     - error
     - multiline-arguments
+  # Consistent operator spacing
+  space-infix-ops: error
 
   ### TYPESCRIPT ###
   # Disabling explicit any is pretty annoying when also using

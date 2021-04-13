@@ -52,6 +52,8 @@ rules:
     - multiline-arguments
   # Consistent operator spacing
   space-infix-ops: error
+  # Reminder to remove console statements
+  no-console: warn
 
   ### TYPESCRIPT ###
   # Disabling explicit any is pretty annoying when also using

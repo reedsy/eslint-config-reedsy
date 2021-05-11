@@ -1,5 +1,7 @@
 # eslint-config-reedsy
 
+**THIS PACKAGE IS DEPRECATED** -- use [`@reedsy/eslint-plugin`](https://github.com/reedsy/eslint-plugin) instead
+
 This is a set of common [`eslint`][1] rules for use across JavaScript projects. Using a common set of rules improves
 consistent code style across the organisation; enforces best practices; and can help to avoid common pitfalls and
 anti-patterns.

@@ -1,6 +1,6 @@
 {
   "name": "@reedsy/eslint-config-reedsy",
-  "version": "3.5.0",
+  "version": "4.0.0",
   "description": "Common eslint config",
   "main": "eslint.yaml",
   "scripts": {
@@ -20,10 +20,10 @@
   },
   "homepage": "https://github.com/reedsy/eslint-config-reedsy#readme",
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^4.15.2",
-    "@typescript-eslint/parser": "^4.15.2",
+    "@typescript-eslint/eslint-plugin": "^5.10.2",
+    "@typescript-eslint/parser": "^5.10.2",
     "eslint-config-google": "^0.14.0",
-    "eslint-plugin-vue": "^7.6.0"
+    "eslint-plugin-vue": "^8.4.0"
   },
   "devDependencies": {}
 }
